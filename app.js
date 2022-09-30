@@ -11,20 +11,19 @@ function createInputUrl(text){
 
 function errorHandler(error){
     console.log(error + " error occured!1!1!1");
-    alert("Oops sorry!1!1 Something is wrong with the server right now!! Please try again in sometime.")
+    alert("Oops sorry!1!1 Something is wrong with the server right now!! Please try again in sometime.");
 }
 
 function clickEventHandler(){
     //taking input from the user
    var inputText = inputTxt.value;
    //processing the input
-   fetch(createUrl(inputText))
-   .then(() => response.json())
+   fetch(createInputUrl(inputText))
+   .then(response => response.json())
    .then(json => {
     //rendering the output
-    var translatedText = json.content.translated;
-    // outputTxt.innerHTML = translatedText;
-    console.log(translatedText)
+    var translatedText = json.contents.translated;
+    outputTxt.innerHTML = translatedText;
 })
    .catch(errorHandler)
 }
