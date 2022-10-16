@@ -44,11 +44,10 @@ body{
     margin: auto;
     margin-top: 1rem;
     border-radius: 0.5rem;
-    width: 20%;
-    height: 5vh;
     font-size: large;
     background-color: var(--primary-color);
     cursor: pointer;
+    padding: 0.5rem;
 }
 
 .output-heading{
